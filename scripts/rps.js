@@ -34,7 +34,29 @@ function getHumanChoice(){
 }
 
 function playRound(humanChoice, computerChoice){
-
+    if(humanChoice == computerChoice){
+        console.log("Both players chose " + humanChoice + "! It's a Draw!")
+    }else if(humanChoice == "Rock" && computerChoice == "Scissors"){
+        humanScore++;
+        console.log(humanChoice + " beats " + computerChoice + "! You Win!")
+    }else if(humanChoice == "Paper" && computerChoice == "Rock"){
+        humanScore++;
+        console.log(humanChoice + " beats " + computerChoice + "! You Win!")
+    }
+    else if(humanChoice == "Scissors" && computerChoice == "Paper"){
+        humanScore++;
+        console.log(humanChoice + " beats " + computerChoice + "! You Win!")
+    }else if(computerChoice == "Rock" && humanChoice == "Scissors"){
+        computerScore++;
+        console.log(computerChoice + " beats " + humanChoice + "! Computer Wins!")
+    }else if(computerChoice == "Paper" && humanChoice == "Rock"){
+        computerScore++;
+        console.log(computerChoice + " beats " + humanChoice + "! Computer Wins!")
+    }
+    else if(computerChoice == "Scissors" && humanChoice == "Paper"){
+        computerScore++;
+        console.log(computerChoice + " beats " + humanChoice + "! Computer Wins!")
+    }
 }
 
 const humanSelection = getHumanChoice();
